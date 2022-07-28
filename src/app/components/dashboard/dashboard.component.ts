@@ -6,7 +6,7 @@ import { ModalService } from 'src/app/shared/services/modal.service';
 import { Task } from '../../components/task/task';
 import {MatDialog} from '@angular/material/dialog'
 import { TaskDialogComponent, TaskDialogResult } from '../task-dialog/task-dialog.component';
-import { AngularFireStorage } from '@angular/fire/compat/storage';
+
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
 
@@ -21,16 +21,6 @@ export class DashboardComponent implements OnInit {
   inProgress = this.store.collection('inProgress').valueChanges({ idField: 'id' }) as Observable<Task[]>;
   done = this.store.collection('done').valueChanges({ idField: 'id' }) as Observable<Task[]>;
 
-  // Task[] = [
-  //   {
-  //     title: 'Buy milk',
-  //     description: 'Go to the store and buy milk'
-  //   },
-  //   {
-  //     title: 'Create a Kanban app',
-  //     description: 'Using Firebase and Angular create a Kanban app!'
-  //   }
-  // ];
 
   constructor(
     public authService: AuthService,

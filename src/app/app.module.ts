@@ -39,8 +39,6 @@ import { MatInputModule } from '@angular/material/input';
     SignUpComponent,
     ForgotPasswordComponent,
     VerifyEmailComponent,
-    
-    
     TaskComponent,
     TaskDialogComponent
   ],
@@ -54,10 +52,8 @@ import { MatInputModule } from '@angular/material/input';
     AngularFireDatabaseModule,
     FormsModule,
     ReactiveFormsModule,
-   
     HttpClientModule,
     BrowserAnimationsModule,
-    
     MatIconModule,
     MatToolbarModule,
     MatCardModule,
